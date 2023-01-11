@@ -1,0 +1,271 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #b4b0ad;
+}
+
+.title {
+    padding: 5px;
+}
+
+/* Cricket Section  */
+.cricket-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+
+.cricket-field {
+    width: 800px;
+    height: 500px;
+    border: 3px solid red;
+    border-radius: 10px;
+    background-color: lightgreen;
+
+}
+
+.line {
+    width: 796px;
+    height: 2px;
+    border: 1px solid white;
+    background-color: black;
+    position: relative;
+    top: -200px;
+
+}
+
+.bat {
+    width: 200px;
+    height: 200px;
+    margin-top: 250px;
+    transition: transform .2s ease-in;
+    position: relative;
+    z-index: 2;
+}
+
+.ball {
+    width: 35px;
+    height: 35px;
+    position: relative;
+    left: 68px;
+    transition: transform 1s ease-out .2s;
+    z-index: 1;
+}
+
+.six-banner {
+    width: 60px;
+    height: 80px;
+    background-color: white;
+    border: 1px solid black;
+    color: darkslategrey;
+    font-size: 5em;
+    font-weight: 600px;
+    padding: 5px;
+    text-align: center;
+    position: relative;
+    bottom: 400px;
+    left: 380px;
+    transition: visibility .2s ease-in-out 1s;
+    visibility: hidden;
+
+}
+
+.cricket-field:hover .bat {
+    transform: rotate(-60deg);
+    transform-origin: top right;
+}
+
+.cricket-field:hover .ball {
+    transform: translate(500px, -200px) rotate(-360deg);
+}
+
+.cricket-field:hover .six-banner {
+    visibility: visible;
+}
+
+/* Badminton Section  */
+@keyframes cork {
+    0% {
+        left: -537px;
+        top: -92px;
+        scale: .85;
+
+    }
+
+    50% {
+        transform: translateY(-280px) rotate(360deg);
+    }
+
+    100% {
+        left: -20px;
+        top: -90px;
+        z-index: 3;
+        scale: 1.2;
+    }
+}
+
+@keyframes badminton-bat-1 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(45deg);
+    }
+
+}
+
+@keyframes badminton-bat-2 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(45deg);
+    }
+
+}
+
+.badminton-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.badminton-field {
+    width: 800px;
+    height: 500px;
+    border: 3px solid red;
+    border-radius: 10px;
+    background-color: antiquewhite;
+    position: relative;
+}
+
+.badminton-net {
+    width: 400px;
+    height: 390px;
+    position: relative;
+    left: 150px;
+    top: 80px;
+    z-index: 2;
+}
+
+.badminton-cork {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    left: -557px;
+    top: -102px;
+    animation: cork 2s ease-in-out .2s infinite alternate;
+    animation-play-state: running;
+}
+
+.badminton-bat-1 {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    transform: rotate(30deg);
+    transform-origin: bottom right;
+    right: 400px;
+    animation: badminton-bat-1 2s ease-out 2.5s infinite alternate;
+    animation-play-state: running;
+
+}
+
+.badminton-bat-2 {
+    width: 120px;
+    height: 120px;
+    transform: rotateY(180deg);
+    position: relative;
+    left: 50px;
+    right: 400px;
+    transform: rotate(30deg);
+    transform-origin: bottom right;
+    animation: badminton-bat-2 2s ease-out 2.5s infinite alternate;
+    animation-play-state: running;
+}
+
+/* galaxy section  */
+.galaxy-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.galaxy-title {
+    color: white;
+    padding: 5px;
+    position: absolute;
+    left: 360px
+}
+
+.galaxy {
+    width: 800px;
+    height: 500px;
+    border: 3px solid red;
+    border-radius: 10px;
+    background-image: url("images/space.jpg");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@keyframes sun-moving {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes earth-moving {
+    from {
+        transform: rotate(0deg) translate(180px);
+    }
+
+    to {
+        transform: rotate(360deg) translate(180px);
+    }
+}
+
+@keyframes moon-moving {
+    from {
+        transform: rotate(0deg) translate(100px);
+        /* transform-origin: bottom left; */
+    }
+
+    to {
+        transform: rotate(360deg) translate(100px);
+        /* transform-origin: bottom left; */
+    }
+}
+
+.sun {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    animation: sun-moving 8s linear infinite;
+}
+
+.earth {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    animation: earth-moving 5s linear infinite reverse;
+
+}
+
+.moon {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    animation: moon-moving 2s linear infinite;
+}
