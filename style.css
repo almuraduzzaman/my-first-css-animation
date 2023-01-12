@@ -272,5 +272,5 @@ body {
     width: 30px;
     height: 30px;
     position: absolute;
-    animation: moon-moving 2s linear infinite;
+    animation: moon-moving 2s linear infinite alternate-reverse;
 }
