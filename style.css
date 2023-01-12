@@ -194,6 +194,7 @@ body {
     display: flex;
     justify-content: center;
     margin-top: 100px;
+    margin-bottom: 100px;
 }
 
 .galaxy-title {
@@ -228,23 +229,23 @@ body {
 
 @keyframes earth-moving {
     from {
-        transform: rotate(0deg) translate(120px);
+        transform: rotate(0deg) translate(180px);
     }
 
     to {
-        transform: rotate(360deg) translate(120px);
+        transform: rotate(360deg) translate(180px);
     }
 }
 
 @keyframes moon-moving {
     from {
-        transform: rotate(360deg) translate(80px);
-        /* transform-origin: bottom left; */
+        transform: rotate(0deg) translate(60px);
+        /* transform-origin: center; */
     }
 
     to {
-        transform: rotate(360deg) translate(80px);
-        /* transform-origin: bottom left; */
+        transform: rotate(-360deg) translate(60px);
+        /* transform-origin: center; */
     }
 }
 
@@ -256,21 +257,24 @@ body {
 }
 
 .earth {
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
     position: absolute;
     /* animation: earth-moving 5s linear infinite reverse; */
 
 }
 
 .earth-moon {
-    animation: earth-moving 5s linear infinite reverse;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: earth-moving 7s linear infinite reverse;
 
 }
 
 .moon {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     position: absolute;
-    animation: moon-moving 2s linear infinite alternate-reverse;
+    animation: moon-moving 4s linear infinite;
 }
