@@ -279,8 +279,8 @@ body {
     animation: moon-moving 4s linear infinite;
 }
 
-/* copyright section  */
-.copyright {
+/* footer section  */
+footer {
     text-align: center;
     color: #D9DBE1;
     background-color: #0B0D17;
