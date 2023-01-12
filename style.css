@@ -228,22 +228,22 @@ body {
 
 @keyframes earth-moving {
     from {
-        transform: rotate(0deg) translate(180px);
+        transform: rotate(0deg) translate(120px);
     }
 
     to {
-        transform: rotate(360deg) translate(180px);
+        transform: rotate(360deg) translate(120px);
     }
 }
 
 @keyframes moon-moving {
     from {
-        transform: rotate(0deg) translate(100px);
+        transform: rotate(360deg) translate(80px);
         /* transform-origin: bottom left; */
     }
 
     to {
-        transform: rotate(360deg) translate(100px);
+        transform: rotate(360deg) translate(80px);
         /* transform-origin: bottom left; */
     }
 }
@@ -252,13 +252,18 @@ body {
     width: 150px;
     height: 150px;
     position: absolute;
-    animation: sun-moving 8s linear infinite;
+    animation: sun-moving 10s linear infinite;
 }
 
 .earth {
     width: 80px;
     height: 80px;
     position: absolute;
+    /* animation: earth-moving 5s linear infinite reverse; */
+
+}
+
+.earth-moon {
     animation: earth-moving 5s linear infinite reverse;
 
 }
